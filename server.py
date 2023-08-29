@@ -10,7 +10,7 @@ app = Flask("Emotion Detector")
 
 
 @app.route("/emotionDetector")
-def sent_detector() -> str:
+def sent_detector() -> dict | str:
     """
     Detects the emotion of a given text using the Watson NLP API.
     """
