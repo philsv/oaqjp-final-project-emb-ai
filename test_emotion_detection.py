@@ -21,4 +21,4 @@ def test_emotion_detector(text, expected):
     Tests the emotion_detector function.
     """
     result = emotion_detector(text)
-    assert result == expected
+    assert result["dominant_emotion"] == expected
