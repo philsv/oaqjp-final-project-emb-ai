@@ -19,8 +19,8 @@ def emotion_detector(text_to_analyse: str) -> dict | None:
 
     data = {"raw_document": {"text": text_to_analyse}}
     response_data = requests.post(url, headers=headers, data=json.dumps(data), timeout=10)
-    json_resonse = response_data.json()
-    emotions = json_resonse["emotionPredictions"][0]["emotion"]
+    json_response = response_data.json()
+    emotions = json_response["emotionPredictions"][0]["emotion"]
     dominant_emotion = max(emotions, key=emotions.get)
     emotions["dominant_emotion"] = dominant_emotion
 
